@@ -1,11 +1,10 @@
-package by.shubinalex.inventorymanagmentautomationsystem.entity;
+package by.shubinalex.inventorymanagementautomationsystem.entity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
@@ -13,21 +12,22 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class ProcurementRequest { // Заявки на обеспечение
+public class DeliveredGoods {// Учет доставленных товаров
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String description;
+    private String productName;
 
-    private BigDecimal amount;
+    private int quantity;
 
-    private LocalDate requestDate;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    private User user;
+    private LocalDate deliveryDate;
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Vendor vendor;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    private SupplyOrder supplyOrder;
+
 }
+

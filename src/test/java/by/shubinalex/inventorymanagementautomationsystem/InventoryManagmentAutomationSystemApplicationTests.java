@@ -1,4 +1,4 @@
-package by.shubinalex.inventorymanagmentautomationsystem;
+package by.shubinalex.inventorymanagementautomationsystem;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

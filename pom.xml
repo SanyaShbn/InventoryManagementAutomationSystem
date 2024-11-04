@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>by.shubinalex</groupId>
-	<artifactId>InventoryManagmentAutomationSystem</artifactId>
+	<artifactId>InventoryManagementAutomationSystem</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>InventoryManagmentAutomationSystem</name>
 	<description>InventoryManagmentAutomationSystem</description>

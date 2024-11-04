@@ -1,6 +1,6 @@
-package by.shubinalex.inventorymanagmentautomationsystem.repository;
+package by.shubinalex.inventorymanagementautomationsystem.repository;
 
-import by.shubinalex.inventorymanagmentautomationsystem.entity.DeliveredGoods;
+import by.shubinalex.inventorymanagementautomationsystem.entity.DeliveredGoods;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 

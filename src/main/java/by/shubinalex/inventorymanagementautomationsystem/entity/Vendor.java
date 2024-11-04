@@ -1,4 +1,4 @@
-package by.shubinalex.inventorymanagmentautomationsystem.entity;
+package by.shubinalex.inventorymanagementautomationsystem.entity;
 
 import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;

@@ -1,4 +1,4 @@
-package by.shubinalex.inventorymanagmentautomationsystem.entity;
+package by.shubinalex.inventorymanagementautomationsystem.entity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,16 +13,19 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class VendorCredit {
+public class ProcurementRequest { // Заявки на обеспечение
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String description;
+
     private BigDecimal amount;
 
-    private LocalDate creditDate;
+    private LocalDate requestDate;
 
-    private LocalDate dueDate;
+    @ManyToOne(fetch = FetchType.LAZY)
+    private User user;
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Vendor vendor;

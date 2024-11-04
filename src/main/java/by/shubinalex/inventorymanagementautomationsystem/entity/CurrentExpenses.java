@@ -1,10 +1,11 @@
-package by.shubinalex.inventorymanagmentautomationsystem.entity;
+package by.shubinalex.inventorymanagementautomationsystem.entity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
@@ -12,17 +13,18 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class PlannedSupply {
+public class CurrentExpenses {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String description;
 
-    private int quantity;
+    private BigDecimal amount;
 
-    private LocalDate plannedDate;
+    private LocalDate date;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    private Vendor vendor;
+    private User user;
+
 }
